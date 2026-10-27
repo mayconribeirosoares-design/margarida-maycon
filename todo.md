@@ -1,0 +1,135 @@
+# Project TODO
+
+- [x] Criar tela inicial de envelope com abertura por toque/clique.
+- [x] Implementar revelação do convite após a abertura do envelope.
+- [x] Adicionar animação delicada de flores caindo, com suporte a prefers-reduced-motion.
+- [x] Construir página pública responsiva e elegante para os dados do casamento.
+- [x] Reservar áreas configuráveis para endereço, data, horário, fotos, paleta de cores e informações adicionais.
+- [x] Implementar formulário público de confirmação de presença (RSVP).
+- [x] Persistir respostas de RSVP no banco de dados com nome, status, acompanhantes, mensagem e data de envio.
+- [x] Adicionar botão de contato/compartilhamento pelo WhatsApp com mensagem pré-preenchida.
+- [x] Criar rota e painel privado de confirmações para o casal.
+- [x] Restringir o painel privado por login e permissão de administrador.
+- [x] Exibir no painel a lista de convidados e contadores por status.
+- [x] Adicionar estados de carregamento, vazio, erro e confirmação de envio.
+- [x] Validar acessibilidade, teclado, contraste, responsividade mobile e desktop.
+- [x] Criar/atualizar testes Vitest para RSVP e autorização do painel.
+- [x] Rodar check, testes e verificação visual antes da entrega.
+- [x] Adicionar seções explícitas para fotos, paleta de cores e informações adicionais do evento.
+- [x] Implementar estado de erro real no painel quando a consulta de confirmações falhar.
+- [x] Validar visualmente o convite em viewport mobile e registrar revisão de acessibilidade, teclado e contraste.
+- [x] Adicionar bloco explícito de informações adicionais editáveis do evento.
+- [x] Registrar evidências verificáveis de acessibilidade, teclado e contraste.
+- [x] Adicionar cronômetro regressivo elegante com dias, horas e minutos até o início da festa.
+- [x] Manter pétalas caindo continuamente enquanto o convite estiver aberto, respeitando prefers-reduced-motion.
+- [x] Criar bloco moderno de localização com links de rota para Google Maps e Waze.
+- [x] Atualizar testes e validar cronômetro, links externos e responsividade.
+- [x] Substituir o destino provisório pelo link real do Recanto Colonial recebido do casal.
+- [x] Validar os links do Google Maps e do Waze com o destino real em desktop e mobile.
+- [x] Inspecionar o esboço HTML correto enviado pelo usuário e mapear sua estrutura visual.
+- [x] Migrar a referência do esboço HTML para a implementação atual sem perder o RSVP e o painel privado.
+- [x] Reintegrar cronômetro, pétalas contínuas e rotas no layout do esboço correto.
+- [x] Validar a versão baseada no esboço correto em desktop e mobile.
+- [x] Ajustar/confirmar o cronômetro para 19/12/2026 às 15h.
+- [x] Adicionar botão para salvar o casamento no calendário do convidado.
+- [x] Alterar as pétalas contínuas para flores em tons de rosa.
+- [x] Revisar e manter a área privada do casal com lista e status das confirmações.
+- [x] Criar testes e validar os novos ajustes em desktop e mobile.
+- [x] Adicionar teste unitário para o conteúdo do arquivo de calendário.
+- [x] Validar explicitamente a rota privada /admin em desktop e mobile nesta rodada.
+- [x] Registrar validação final conjunta de cronômetro, calendário, pétalas rosas e painel privado.
+- [x] Permitir concluir o RSVP diretamente no site sem exigir envio pelo WhatsApp.
+- [x] Atualizar textos e botões para deixar o WhatsApp como opção voluntária.
+- [x] Testar o RSVP sem WhatsApp e validar a atualização em desktop e mobile.
+- [x] Adicionar teste específico para confirmar presença apenas pelo site, sem acionar WhatsApp.
+- [x] Validar explicitamente a página pública em desktop após tornar o WhatsApp opcional.
+- [x] Adicionar contador destacado do total de confirmados na Área dos Noivos.
+- [x] Adicionar opção para exportar a lista de convidados em arquivo CSV.
+- [x] Testar contador, exportação e autorização do painel em desktop e mobile.
+- [x] Validar o clique do botão Exportar lista e o download do CSV no navegador.
+- [x] Cobrir a lógica de exportação do painel além do helper CSV.
+- [x] Registrar validação dos estados não logado e sem permissão da rota /admin.
+- [x] Cobrir por teste o disparo do download gerado pelo botão Exportar lista.
+- [x] Cobrir por teste os estados de acesso da Área dos Noivos para visitante e usuário sem permissão.
+- [x] Usar a foto do casal com vestido branco como imagem principal do convite.
+- [x] Criar tela inicial com envelope elegante e buquê rosado com as iniciais do casal.
+- [x] Fazer o buquê se desfazer ao toque/clique e revelar o convite.
+- [x] Integrar a nova abertura sem perder RSVP, calendário, rotas e Área dos Noivos.
+- [x] Validar a abertura por toque/clique, acessibilidade, animações e responsividade.
+- [x] Registrar evidência visual do estado aberto com a foto do vestido branco como imagem principal.
+- [x] Validar abertura por clique/toque e teclado, incluindo o estado aberto em desktop e mobile.
+- [x] Documentar a validação de prefers-reduced-motion para a nova abertura.
+- [x] Cobrir a ativação por Enter e Espaço na abertura do envelope em teste verificável.
+- [x] Capturar o estado aberto do convite em mobile para validar a foto principal e a responsividade.
+- [x] Incluir todas as cinco fotos enviadas pelo casal na galeria pública do convite.
+- [x] Manter a foto de vestido branco como imagem principal e as demais como galeria complementar.
+- [x] Validar carregamento das imagens e responsividade da galeria em desktop e mobile.
+- [x] Adicionar exclusão de confirmação na Área dos Noivos com confirmação antes de apagar.
+- [x] Restringir o painel a duas contas autorizadas, uma do noivo e uma da noiva.
+- [x] Garantir que outros usuários admin não tenham acesso ao painel do casal.
+- [x] Adicionar testes de exclusão, autorização exclusiva e atualizar a exportação após exclusões.
+- [x] Validar visualmente a galeria também em desktop após a inclusão das cinco fotos.
+- [x] Adicionar feedback de sucesso e erro para exclusão de RSVP.
+- [x] Restringir visualmente a rota /admin ao proprietário e à segunda conta autorizada.
+- [x] Testar acesso permitido da segunda conta e bloqueio completo de administradores externos.
+- [x] Testar que a exportação usa a lista atualizada após uma exclusão.
+- [x] Capturar e revisar explicitamente a galeria em desktop após a inclusão das cinco fotos.
+- [x] Adicionar teste/validação da rota /admin para bloqueio visual de administradores externos.
+- [x] Adicionar teste cobrindo exclusão seguida de exportação com lista atualizada.
+- [x] Validar por teste a visibilidade da rota /admin para administrador externo usando a mesma regra do componente.
+- [x] Atualizar o cache da lista após excluir e testar a exportação imediatamente com os dados removidos.
+- [x] Extrair e testar a decisão visual da rota /admin para admin externo.
+- [x] Extrair e testar o fluxo completo de lista pós-exclusão usado pelo cache e pela exportação.
+- [x] Testar o fluxo integrado do cache do painel: exclusão bem-sucedida, atualização da lista e exportação imediata sem o RSVP excluído.
+- [x] Extrair a sequência pós-exclusão do painel para atualizar a lista e preparar a exportação em uma única função testável.
+- [x] Integrar a preparação pós-exclusão também ao fluxo real de exportação do painel.
+- [x] Cobrir por teste o clique de exportação imediatamente após uma exclusão usando a mesma sequência compartilhada.
+- [x] Verificar por teste o clique do link, o nome do arquivo e o conteúdo atualizado no download após excluir um RSVP.
+- [x] Tornar a exclusão de RSVP reversível, arquivando o registro em vez de apagá-lo definitivamente.
+- [x] Adicionar opção de restaurar uma confirmação arquivada no Portal dos Noivos.
+- [x] Manter a exportação CSV como cópia de segurança manual e incluir os registros arquivados em uma exportação separada.
+- [x] Exibir no painel a indicação de dados arquivados e a data da última atualização.
+- [x] Criar testes de arquivamento, restauração, persistência e exportação dos dados arquivados.
+- [x] Confirmar na versão atual as cinco fotos integradas na galeria.
+- [x] Confirmar na versão atual o envelope com flores e monograma.
+- [x] Confirmar na versão atual o botão de salvar no calendário.
+- [x] Adicionar PIN privado para a Área dos Noivos, além do login existente.
+- [x] Restringir a validação do PIN ao fluxo da Área dos Noivos e não expor o valor no frontend.
+- [x] Criar testes para PIN correto, PIN incorreto, bloqueio e sessão autorizada.
+- [x] Validar novamente os recursos visuais e o painel em desktop e mobile.
+- [x] Adicionar coluna de arquivamento reversível ao modelo de RSVP.
+- [x] Trocar exclusão definitiva por arquivamento e criar restauração protegida.
+- [x] Exibir e exportar confirmações arquivadas separadamente no Portal dos Noivos.
+- [x] Mostrar no painel a quantidade de arquivados e a última atualização dos dados.
+- [x] Criar testes de arquivamento, restauração, persistência e exportação histórica.
+- [x] Adicionar teste verificável da exportação separada dos RSVPs arquivados, incluindo conteúdo e nome do arquivo.
+- [x] Adicionar teste verificável do ciclo persistente de arquivamento e restauração, documentando o limite de testes unitários quando aplicável.
+- [x] Fazer o botão de exportação histórica usar nome de arquivo dedicado e cobrir o fluxo real do painel.
+- [x] Criar teste isolado da persistência de arquivamento e restauração nos helpers de banco.
+- [x] Cobrir o fluxo real de exportação histórica do Portal dos Noivos, incluindo filename dedicado, conteúdo e disparo do download.
+- [x] Substituir as flores artificiais da abertura por um buquê com aparência natural.
+- [x] Reduzir elementos gráficos repetitivos e modernizar a composição do envelope.
+- [x] Manter pétalas rosadas orgânicas durante a abertura e o convite aberto.
+- [x] Validar a nova aparência em desktop e mobile sem perder clique, toque e teclado.
+- [x] Refinar a composição do envelope com relevo, selo e hierarquia visual mais contemporâneos.
+- [x] Substituir símbolos Unicode das pétalas por elementos visuais orgânicos reais.
+- [x] Revalidar o estado aberto em desktop e mobile após a troca do buquê.
+- [x] Documentar testes explícitos de clique, toque, Enter e Espaço na nova abertura.
+- [x] Corrigir a referência runtime antiga a deleteRsvp que ainda aparece nos logs.
+- [x] Capturar e revisar explicitamente o estado aberto do convite em desktop após a troca do buquê e das pétalas.
+- [x] Adicionar evidência técnica explícita da abertura por clique, toque, Enter e Espaço na versão atual.
+- [x] Refinar o lacre do envelope para destacar as iniciais M & M com acabamento premium.
+- [x] Manter o buquê natural visível e integrado ao desenho do envelope durante o estado fechado.
+- [x] Validar o lacre e a permanência do buquê em desktop, mobile e abertura por teclado.
+- [x] Padronizar todas as ocorrências do casal para “Margarida & Maycon”, sempre nessa ordem.
+- [x] Atualizar mensagens de RSVP, WhatsApp, calendário, envelope e Área dos Noivos sem quebrar os fluxos existentes.
+- [x] Cobrir a nova ordem dos nomes em testes e validar visualmente desktop e mobile.
+- [x] Revalidar e registrar a abertura por teclado com Enter e Espaço após o novo lacre.
+- [x] Padronizar os nomes dos arquivos exportados para margarida-maycon e atualizar seus testes.
+- [x] Ampliar os testes da ordem dos nomes em exportação, RSVP/WhatsApp e Área dos Noivos.
+- [x] Adicionar teste verificável para mensagem de RSVP/WhatsApp com “Margarida & Maycon”.
+- [x] Adicionar teste verificável para a superfície visível da Área dos Noivos com “Margarida & Maycon”.
+- [x] Complementar a cobertura de nomes sem remover os testes existentes de exportação e calendário.
+- [x] Cobrir a forma exata “Margarida & Maycon” no texto compartilhado de RSVP/WhatsApp.
+- [x] Criar uma função de branding administrativo testável e usada no cabeçalho da Área dos Noivos.
+- [x] Atualizar o teste de nomes para comprovar a superfície administrativa e a forma exata do texto.

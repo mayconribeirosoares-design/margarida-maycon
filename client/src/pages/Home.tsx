@@ -24,6 +24,7 @@ import { buildCoupleConfirmationMessage } from "@shared/couple";
 
 const couplePhoto = "/assets/margarida-maycon.png";
 const bouquetSeal = "/manus-storage/async-images/RR0EHwUkBVbraSNvFsREWw/image-1.webp";
+const ringsPhoto = "/assets/aliancas-margarida-maycon.jpg";
 const petals = Array.from({ length: 18 }, (_, index) => index);
 export default function Home() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(() => window.location.hash === "#opened");
@@ -84,7 +85,6 @@ export default function Home() {
       {!isEnvelopeOpen && (
         <section className="envelope-screen" aria-label="Abertura do convite">
           <div className="envelope-glow" />
-          <div className="envelope-kicker">Um convite especial para você</div>
           <button
             className="envelope-button"
             type="button"
@@ -133,6 +133,11 @@ export default function Home() {
         <section className="sketch-details">
           <div className="sketch-detail-card"><CalendarDays className="sketch-icon" /><div className="sketch-label">Data e horário</div><div className="sketch-main">Sábado, 19 de dezembro</div><div className="sketch-sub">Cerimônia às 15h</div><button type="button" className="calendar-button" onClick={saveToCalendar}><CalendarPlus size={14} /> Salvar no calendário</button></div>
           <div className="sketch-detail-card"><MapPin className="sketch-icon" /><div className="sketch-label">Local</div><div className="sketch-main">Recanto Colonial</div><div className="sketch-sub">Guanambi, Bahia</div><div className="route-actions-sketch"><a href={mapsUrl} target="_blank" rel="noreferrer"><MapPin size={14} /> Google Maps</a><a href={wazeUrl} target="_blank" rel="noreferrer"><Navigation size={14} /> Waze</a></div><small className="route-caption">Abra para criar seu trajeto</small></div>
+        </section>
+
+        <section className="photo-detail-card" aria-labelledby="rings-title">
+          <figure><img src={ringsPhoto} alt="Mãos de Margarida e Maycon com alianças sobre flores vermelhas" loading="lazy" /></figure>
+          <div className="photo-detail-copy"><div className="sketch-label">Um detalhe do nosso sim</div><h2 id="rings-title">Um sim para a vida inteira</h2><p>Entre flores, carinho e promessas, estamos contando os dias para celebrar esse novo capítulo ao lado de quem amamos.</p></div>
         </section>
 
         <section className="gift-access-card" aria-labelledby="gifts-access-title"><div className="section-ornament"><span /><span className="gift-access-mark">✦</span><span /></div><div className="sketch-label">Com carinho, se desejar</div><h2 id="gifts-access-title">Lista de presentes</h2><p>Sua presença é o nosso maior presente. Se quiser nos presentear, preparamos uma lista organizada para a nossa casa e para a lua de mel.</p><Link className="gift-access-button" href="/presentes">Acessar lista de presentes <span>→</span></Link></section>

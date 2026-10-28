@@ -348,20 +348,69 @@ body { background:#f5efe5; }
 .couple-area-note { display:block; margin-top:7px; color:rgba(59,48,36,.48); font-size:9px; letter-spacing:.04em; }
 
 
-/* Buquê floral sobre o lacre do envelope de abertura */
+/* Buquê floral centralizado acima do envelope, separado do lacre */
 .natural-bouquet {
-  top: 28%;
-  left: 73%;
-  width: min(27%, 112px);
-  transform: translate(-50%, -6%) rotate(-18deg);
+  top: -68px;
+  left: 50%;
+  width: min(31%, 132px);
+  transform: translateX(-50%) rotate(-4deg);
   z-index: 8;
 }
 .envelope-button:hover .natural-bouquet {
-  transform: translate(-50%, -11%) rotate(-15deg) scale(1.03);
+  transform: translate(-50%, -5px) rotate(-2deg) scale(1.03);
 }
 .is-open .natural-bouquet {
-  transform: translate(-50%, -92px) rotate(12deg) scale(.45);
+  transform: translate(-50%, -34px) rotate(5deg) scale(.5);
+  opacity: 0;
+  filter: blur(4px) drop-shadow(0 0 0 rgba(78,44,35,0));
 }
 @media (max-width:560px) {
-  .natural-bouquet { top: 30%; left: 74%; width: 28%; }
+  .natural-bouquet { top: -56px; width: 34%; }
+}
+
+
+/* Foto das alianças: bloco editorial entre detalhes e presentes */
+.photo-detail-card {
+  width: min(100%, 860px);
+  margin: 56px auto 0;
+  padding: 0 22px;
+  display: grid;
+  grid-template-columns: minmax(190px, .72fr) 1fr;
+  gap: clamp(24px, 6vw, 64px);
+  align-items: center;
+}
+.photo-detail-card figure {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 7px solid #fbf6ee;
+  border-radius: 90px 90px 8px 8px;
+  background: #eadbca;
+  box-shadow: 0 14px 28px rgba(75,55,39,.12);
+}
+.photo-detail-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-detail-copy { padding: 18px 0; }
+.photo-detail-copy h2 {
+  max-width: 360px;
+  margin: 9px 0 14px;
+  color: var(--soil);
+  font: 500 clamp(30px, 5vw, 48px)/1.08 'Playfair Display','Fraunces',serif;
+}
+.photo-detail-copy p {
+  max-width: 350px;
+  margin: 0;
+  color: rgba(59,48,36,.68);
+  font-size: 14px;
+  line-height: 1.8;
+}
+@media (max-width:560px) {
+  .photo-detail-card { grid-template-columns: 1fr; gap: 22px; padding-inline: 18px; margin-top: 46px; }
+  .photo-detail-card figure { width: min(100%, 260px); margin: 0 auto; border-radius: 66px 66px 7px 7px; }
+  .photo-detail-copy { text-align: center; }
+  .photo-detail-copy h2, .photo-detail-copy p { margin-left: auto; margin-right: auto; }
 }

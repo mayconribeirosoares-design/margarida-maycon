@@ -22,13 +22,8 @@ import {
 } from "@shared/invitation";
 import { buildCoupleConfirmationMessage } from "@shared/couple";
 
-const couplePhoto = "/manus-storage/async-images/JSKccCo0kG3YzODFGJoEr7/image-1.webp";
-const galleryPhotos = [
-  { src: "/manus-storage/async-images/JSKccCo0kG3YzODFGJoEr7/image-2.webp", alt: "Jardim iluminado com flores e folhagens" },
-  { src: "/manus-storage/async-images/JSKccCo0kG3YzODFGJoEr7/image-3.webp", alt: "Taças e detalhes delicados da celebração" },
-  { src: "/manus-storage/async-images/JSKccCo0kG3YzODFGJoEr7/image-4.webp", alt: "Mãos entrelaçadas ao lado de flores no pôr do sol" },
-  { src: "/manus-storage/async-images/JSKccCo0kG3YzODFGJoEr7/image-1.webp", alt: "Margarida e Maycon em um jardim ensolarado" },
-];
+const couplePhoto = "/assets/margarida-maycon.png";
+const bouquetSeal = "/manus-storage/async-images/RR0EHwUkBVbraSNvFsREWw/image-1.webp";
 const petals = Array.from({ length: 18 }, (_, index) => index);
 export default function Home() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(() => window.location.hash === "#opened");
@@ -106,6 +101,7 @@ export default function Home() {
             </div>
             <div className="envelope-flap" />
             <div className="envelope-pocket" />
+            <img className="natural-bouquet" src={bouquetSeal} alt="" aria-hidden="true" />
             <span className="envelope-seal"><span className="seal-inner"><strong>M <i>&amp;</i> M</strong><small>MARGARIDA · MAYCON</small></span></span>
           </button>
           <p className="envelope-hint">Toque no buquê para abrir</p>
@@ -125,7 +121,6 @@ export default function Home() {
           <div className="sketch-eyebrow">Com alegria, convidamos você</div>
           <div className="sketch-arch">
             <img src={couplePhoto} alt="Margarida e Maycon" />
-            <div className="sketch-caption"><span>Margarida <i>&amp;</i> Maycon</span><strong>Nosso casamento</strong></div>
           </div>
           <div className="sketch-date"><span />19 de dezembro de 2026<span /></div>
           <p className="sketch-intro">Depois de tudo o que vivemos, chegou a hora de celebrar. Gostaríamos muito da sua presença para dizer <em>sim</em> diante de quem amamos.</p>
@@ -141,8 +136,6 @@ export default function Home() {
         </section>
 
         <section className="gift-access-card" aria-labelledby="gifts-access-title"><div className="section-ornament"><span /><span className="gift-access-mark">✦</span><span /></div><div className="sketch-label">Com carinho, se desejar</div><h2 id="gifts-access-title">Lista de presentes</h2><p>Sua presença é o nosso maior presente. Se quiser nos presentear, preparamos uma lista organizada para a nossa casa e para a lua de mel.</p><Link className="gift-access-button" href="/presentes">Acessar lista de presentes <span>→</span></Link></section>
-
-        <section className="photo-gallery-sketch" aria-labelledby="gallery-title"><div className="sketch-label">Alguns capítulos da nossa história</div><h2 id="gallery-title">Momentos que guardamos</h2><p className="gallery-intro">Cada foto carrega um pedacinho do caminho que nos trouxe até aqui.</p><div className="gallery-grid-sketch">{galleryPhotos.map((photo, index) => <figure key={photo.src} className={`gallery-photo gallery-photo-${index + 1}`}><img src={photo.src} alt={photo.alt} loading="lazy" /></figure>)}</div></section>
 
         <section className="sketch-rsvp" id="rsvp"><h2>Confirmar presença</h2><p className="rsvp-sub">Preencha os campos abaixo. Sua presença será registrada diretamente neste convite. Se quiser, você também pode avisar os noivos pelo WhatsApp.</p><form onSubmit={handleSubmit}><div className="sketch-field"><label htmlFor="nome">Seu nome</label><input id="nome" required value={guestName} onChange={(e) => setGuestName(e.target.value)} placeholder="Digite seu nome completo" /></div><div className="sketch-field"><label>Você vai comparecer?</label><div className="choice-row-sketch"><button type="button" className={attending === true ? "choice-sketch active-yes" : "choice-sketch"} onClick={() => setAttending(true)}>Sim, vou!</button><button type="button" className={attending === false ? "choice-sketch active-no" : "choice-sketch"} onClick={() => setAttending(false)}>Não poderei ir</button></div></div>{attending === true && <div className="guests-row-sketch"><label htmlFor="guests">Total de pessoas</label><div className="stepper-sketch"><button type="button" onClick={() => setGuests(Math.max(1, guests - 1))}>−</button><span>{guests}</span><button type="button" onClick={() => setGuests(Math.min(10, guests + 1))}>+</button></div></div>}<div className="sketch-field"><label htmlFor="phone">WhatsApp <span>(opcional)</span></label><input id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="(00) 00000-0000" /></div><div className="sketch-field"><label htmlFor="message">Uma mensagem <span>(opcional)</span></label><textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Deixe um carinho para os noivos" rows={2} /></div><p className="send-note-sketch">Sua resposta será registrada no site. O envio pelo WhatsApp é opcional e fica a seu critério.</p><button className="sketch-cta primary" type="submit" disabled={submitRsvp.isPending || !canSubmitRsvp(guestName, attending)}>{submitRsvp.isPending ? "Registrando..." : "Registrar confirmação"}<Send size={15} /></button><div className="whatsapp-optional-label">Se desejar, avise também por WhatsApp</div><div className="whatsapp-buttons"><button className="sketch-cta whatsapp" type="button" disabled={!canSubmitRsvp(guestName, attending)} onClick={() => sendWhatsApp(margaridaWhatsApp)}>Enviar para Margarida</button><button className="sketch-cta secondary" type="button" disabled={!canSubmitRsvp(guestName, attending)} onClick={() => sendWhatsApp(mayconWhatsApp)}>Enviar para Maycon</button></div></form></section>
 

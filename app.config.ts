@@ -1,1 +1,1 @@
-export default { logoUrl: "https://placehold.co/256x256/71856d/f8f4ef.png?text=M%26M" };
+export default { logoUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663921669006/xvtdzUHAuYAIthjl.png" };
